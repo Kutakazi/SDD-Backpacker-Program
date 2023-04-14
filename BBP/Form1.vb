@@ -29,4 +29,19 @@
     Private Sub pbMain_Image_change_On_Leave(sender As Object, e As EventArgs) Handles btnAustralia.MouseLeave, btnChina.MouseLeave, btnRussia.MouseLeave, btnFinland.MouseLeave
         pbMain.BackgroundImage = My.Resources.world
     End Sub
+    Private Sub Switch_Forms(sender As Object, e As EventArgs) Handles btnAustralia.Click, btnChina.Click, btnRussia.Click, btnFinland.Click
+        Dim Form3 As New Form3
+        Select Case sender.name
+            Case "btnAustralia"
+                Form3.Country = "Australia"
+            Case "btnChina"
+                Form3.Country = "Australia"
+            Case "btnRussia"
+                Form3.Country = "Australia"
+            Case "btnFinland"
+                Form3.Country = "Australia"
+        End Select
+        Me.Hide()
+        Form3.Show()
+    End Sub
 End Class
