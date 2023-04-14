@@ -22,9 +22,33 @@ Partial Class Form2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.pbBar = New System.Windows.Forms.PictureBox()
+        CType(Me.pbBar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'pbBar
+        '
+        Me.pbBar.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.pbBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pbBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.pbBar.Location = New System.Drawing.Point(-47, 0)
+        Me.pbBar.Name = "pbBar"
+        Me.pbBar.Size = New System.Drawing.Size(1064, 90)
+        Me.pbBar.TabIndex = 2
+        Me.pbBar.TabStop = False
+        '
+        'Form2
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(704, 681)
+        Me.Controls.Add(Me.pbBar)
+        Me.Name = "Form2"
         Me.Text = "Form2"
+        CType(Me.pbBar, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+
     End Sub
+
+    Friend WithEvents pbBar As PictureBox
 End Class
