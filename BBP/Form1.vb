@@ -35,11 +35,11 @@
             Case "btnAustralia"
                 Form3.Country = "Australia"
             Case "btnChina"
-                Form3.Country = "Australia"
+                Form3.Country = "China"
             Case "btnRussia"
-                Form3.Country = "Australia"
+                Form3.Country = "Russia"
             Case "btnFinland"
-                Form3.Country = "Australia"
+                Form3.Country = "Finland"
         End Select
         Me.Hide()
         Form3.Show()

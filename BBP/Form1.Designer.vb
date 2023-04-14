@@ -25,8 +25,6 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.tt = New System.Windows.Forms.ToolTip(Me.components)
-        Me.lbl1 = New System.Windows.Forms.Label()
-        Me.pbMain = New System.Windows.Forms.PictureBox()
         Me.btnChina = New System.Windows.Forms.Button()
         Me.btnRussia = New System.Windows.Forms.Button()
         Me.btnFinland = New System.Windows.Forms.Button()
@@ -35,6 +33,8 @@ Partial Class Form1
         Me.btnInfo = New System.Windows.Forms.Button()
         Me.btnMinimize = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.lbl1 = New System.Windows.Forms.Label()
+        Me.pbMain = New System.Windows.Forms.PictureBox()
         Me.pbBar = New System.Windows.Forms.PictureBox()
         Me.pbBottomBar = New System.Windows.Forms.PictureBox()
         CType(Me.pbMain, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,19 +45,6 @@ Partial Class Form1
         'tt
         '
         Me.tt.AutomaticDelay = 250
-        '
-        'lbl1
-        '
-        resources.ApplyResources(Me.lbl1, "lbl1")
-        Me.lbl1.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lbl1.Name = "lbl1"
-        '
-        'pbMain
-        '
-        Me.pbMain.BackgroundImage = Global.BBP.My.Resources.Resources.world
-        resources.ApplyResources(Me.pbMain, "pbMain")
-        Me.pbMain.Name = "pbMain"
-        Me.pbMain.TabStop = False
         '
         'btnChina
         '
@@ -134,6 +121,19 @@ Partial Class Form1
         Me.btnExit.Name = "btnExit"
         Me.tt.SetToolTip(Me.btnExit, resources.GetString("btnExit.ToolTip"))
         Me.btnExit.UseVisualStyleBackColor = False
+        '
+        'lbl1
+        '
+        resources.ApplyResources(Me.lbl1, "lbl1")
+        Me.lbl1.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lbl1.Name = "lbl1"
+        '
+        'pbMain
+        '
+        Me.pbMain.BackgroundImage = Global.BBP.My.Resources.Resources.world
+        resources.ApplyResources(Me.pbMain, "pbMain")
+        Me.pbMain.Name = "pbMain"
+        Me.pbMain.TabStop = False
         '
         'pbBar
         '
