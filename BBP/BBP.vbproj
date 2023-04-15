@@ -48,6 +48,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -177,6 +180,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\Aus.png" />
   </ItemGroup>
   <ItemGroup>
@@ -232,6 +236,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MapRussia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info_Grey.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Left.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Right.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

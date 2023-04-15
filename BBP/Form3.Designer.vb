@@ -100,8 +100,10 @@ Partial Class Form3
         '
         Me.lblGeneralInfo.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblGeneralInfo.Location = New System.Drawing.Point(16, 140)
+        Me.lblGeneralInfo.MaximumSize = New System.Drawing.Size(1080, 720)
+        Me.lblGeneralInfo.MinimumSize = New System.Drawing.Size(1080, 720)
         Me.lblGeneralInfo.Name = "lblGeneralInfo"
-        Me.lblGeneralInfo.Size = New System.Drawing.Size(777, 180)
+        Me.lblGeneralInfo.Size = New System.Drawing.Size(1080, 720)
         Me.lblGeneralInfo.TabIndex = 13
         '
         'lblTitle
@@ -126,6 +128,7 @@ Partial Class Form3
         Me.btnTranslator.Size = New System.Drawing.Size(178, 46)
         Me.btnTranslator.TabIndex = 20
         Me.btnTranslator.Text = "Translator"
+        Me.ToolTip1.SetToolTip(Me.btnTranslator, "Translator")
         Me.btnTranslator.UseVisualStyleBackColor = False
         '
         'btnLandmarks
@@ -140,6 +143,7 @@ Partial Class Form3
         Me.btnLandmarks.Size = New System.Drawing.Size(178, 46)
         Me.btnLandmarks.TabIndex = 22
         Me.btnLandmarks.Text = "Landmarks"
+        Me.ToolTip1.SetToolTip(Me.btnLandmarks, "Landmarks")
         Me.btnLandmarks.UseVisualStyleBackColor = False
         '
         'btnConverter
@@ -154,6 +158,7 @@ Partial Class Form3
         Me.btnConverter.Size = New System.Drawing.Size(178, 46)
         Me.btnConverter.TabIndex = 23
         Me.btnConverter.Text = "Converters"
+        Me.ToolTip1.SetToolTip(Me.btnConverter, "Converters")
         Me.btnConverter.UseVisualStyleBackColor = False
         '
         'lblMap
@@ -213,6 +218,7 @@ Partial Class Form3
         Me.btnInfo.Name = "btnInfo"
         Me.btnInfo.Size = New System.Drawing.Size(70, 70)
         Me.btnInfo.TabIndex = 10
+        Me.ToolTip1.SetToolTip(Me.btnInfo, "Infomation")
         Me.btnInfo.UseVisualStyleBackColor = False
         '
         'btnMinimize
@@ -227,6 +233,7 @@ Partial Class Form3
         Me.btnMinimize.Name = "btnMinimize"
         Me.btnMinimize.Size = New System.Drawing.Size(70, 70)
         Me.btnMinimize.TabIndex = 9
+        Me.ToolTip1.SetToolTip(Me.btnMinimize, "Minimize")
         Me.btnMinimize.UseVisualStyleBackColor = False
         '
         'btnExit
@@ -241,6 +248,7 @@ Partial Class Form3
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(70, 70)
         Me.btnExit.TabIndex = 7
+        Me.ToolTip1.SetToolTip(Me.btnExit, "Exit")
         Me.btnExit.UseVisualStyleBackColor = False
         '
         'btnReturn
@@ -256,6 +264,7 @@ Partial Class Form3
         Me.btnReturn.Name = "btnReturn"
         Me.btnReturn.Size = New System.Drawing.Size(70, 70)
         Me.btnReturn.TabIndex = 6
+        Me.ToolTip1.SetToolTip(Me.btnReturn, "Return")
         Me.btnReturn.UseVisualStyleBackColor = False
         '
         'pbBar
@@ -271,7 +280,8 @@ Partial Class Form3
         '
         'Form3
         '
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1064, 681)
         Me.ControlBox = False
         Me.Controls.Add(Me.lblFlag)
@@ -293,10 +303,14 @@ Partial Class Form3
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnReturn)
         Me.Controls.Add(Me.pbBar)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(1080, 720)
         Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(1080, 720)
         Me.Name = "Form3"
         Me.ShowIcon = False
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.Text = "Country"
         CType(Me.pbMap, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbFlag, System.ComponentModel.ISupportInitialize).EndInit()

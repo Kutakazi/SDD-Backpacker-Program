@@ -14,6 +14,15 @@
                 Finland()
         End Select
     End Sub
+    Private Sub Visible_Change(sender As Object, e As EventArgs) Handles MyBase.VisibleChanged
+        If Me.Visible Then
+            Dim form2 As Form2 = Application.OpenForms().OfType(Of Form2)().FirstOrDefault()
+            If form2 IsNot Nothing Then
+                form2.Current_Form = 3
+                form2.Update_Info()
+            End If
+        End If
+    End Sub
     Private Sub Button_Control(sender As Object, e As EventArgs) Handles btnExit.Click, btnInfo.Click, btnMinimize.Click, btnReturn.Click, btnTranslator.Click, btnConverter.Click, btnLandmarks.Click, pbFlag.Click
         Select Case sender.name
             Case "btnExit"
@@ -21,38 +30,56 @@
                     End
                 End If
             Case "btnInfo"
-                Dim form2 As New Form2
+                For Each frm As Form In My.Application.OpenForms
+                    If frm.Name = "Form2" AndAlso frm.Visible Then
+                        Return
+                    End If
+                Next
+                Dim form2 As New Form2()
+                form2.Current_Form = 3
                 form2.Show()
             Case "btnMinimize"
                 Me.WindowState = FormWindowState.Minimized
             Case "btnReturn"
                 Dim form1 As New Form1
                 Me.Hide()
+                form1.StartPosition = FormStartPosition.Manual
+                form1.Location = Me.Location
                 form1.Show()
             Case "btnTranslator"
                 Dim form4 As New Form4
                 form4.Country = Country
                 Me.Hide()
+                form4.StartPosition = FormStartPosition.Manual
+                form4.Location = Me.Location
                 form4.Show()
             Case "btnLandmarks"
                 Dim form5 As New Form5
                 form5.Country = Country
                 Me.Hide()
+                form5.StartPosition = FormStartPosition.Manual
+                form5.Location = Me.Location
                 form5.Show()
             Case "btnConverter"
                 Dim form6 As New Form6
                 form6.Country = Country
                 Me.Hide()
+                form6.StartPosition = FormStartPosition.Manual
+                form6.Location = Me.Location
                 form6.Show()
             Case "pbFlag"
                 Dim form7 As New Form7
                 form7.Country = Country
-
+                form7.StartPosition = FormStartPosition.Manual
+                form7.Location = Me.Location
+                Me.Hide()
+                form7.Show()
         End Select
     End Sub
     Sub Australia()
         pbFlag.BackgroundImage = My.Resources.Aus
         pbMap.BackgroundImage = My.Resources.MapAus
+        btnTranslator.Enabled = False
         lblPopulation.Text = "Population: 25,890,773"
         lblCurrency.Text = "Currency: Australian Dollar (AUD)"
         lblCapital.Text = "Capital City: Canberra"
@@ -62,6 +89,7 @@
     Sub China()
         pbFlag.BackgroundImage = My.Resources.China
         pbMap.BackgroundImage = My.Resources.MapChina
+        btnTranslator.Enabled = True
         lblPopulation.Text = "Population: 1,411,778,724"
         lblCurrency.Text = "Currency: Renminbi (CNY)"
         lblCapital.Text = "Capital City: Beijing"
@@ -71,6 +99,7 @@
     Sub Russia()
         pbFlag.BackgroundImage = My.Resources.Russia
         pbMap.BackgroundImage = My.Resources.MapRussia
+        btnTranslator.Enabled = True
         lblPopulation.Text = "Population: 147,182,123"
         lblCurrency.Text = "Currency: Ruble (RUB)"
         lblCapital.Text = "Capital City: Moscow"
@@ -80,6 +109,7 @@
     Sub Finland()
         pbFlag.BackgroundImage = My.Resources.Finland
         pbMap.BackgroundImage = My.Resources.MapFinland
+        btnTranslator.Enabled = True
         lblPopulation.Text = "Population: 5,614,571"
         lblCurrency.Text = "Currency: Euro (EUR)"
         lblCapital.Text = "Capital City: Helsinki"
