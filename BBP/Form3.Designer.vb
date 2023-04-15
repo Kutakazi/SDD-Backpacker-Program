@@ -35,13 +35,13 @@ Partial Class Form3
         Me.btnConverter = New System.Windows.Forms.Button()
         Me.lblMap = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.lblFlag = New System.Windows.Forms.Label()
         Me.pbMap = New System.Windows.Forms.PictureBox()
         Me.pbFlag = New System.Windows.Forms.PictureBox()
         Me.btnInfo = New System.Windows.Forms.Button()
         Me.btnMinimize = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnReturn = New System.Windows.Forms.Button()
+        Me.lblFlag = New System.Windows.Forms.Label()
         Me.pbBar = New System.Windows.Forms.PictureBox()
         CType(Me.pbMap, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbFlag, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,7 +67,7 @@ Partial Class Form3
         Me.lblCapital.Name = "lblCapital"
         Me.lblCapital.Size = New System.Drawing.Size(777, 25)
         Me.lblCapital.TabIndex = 17
-        Me.lblCapital.Text = "Capital City:"
+        Me.lblCapital.Text = "Capital City: (Capital City)"
         '
         'lblReligion
         '
@@ -76,7 +76,7 @@ Partial Class Form3
         Me.lblReligion.Name = "lblReligion"
         Me.lblReligion.Size = New System.Drawing.Size(777, 25)
         Me.lblReligion.TabIndex = 16
-        Me.lblReligion.Text = "Major Religion:"
+        Me.lblReligion.Text = "Major Religion: (Major Religion)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'lblCurrency
         '
@@ -85,7 +85,7 @@ Partial Class Form3
         Me.lblCurrency.Name = "lblCurrency"
         Me.lblCurrency.Size = New System.Drawing.Size(777, 25)
         Me.lblCurrency.TabIndex = 15
-        Me.lblCurrency.Text = "Currency:"
+        Me.lblCurrency.Text = "Currency: (Currency)"
         '
         'lblPopulation
         '
@@ -94,16 +94,14 @@ Partial Class Form3
         Me.lblPopulation.Name = "lblPopulation"
         Me.lblPopulation.Size = New System.Drawing.Size(777, 25)
         Me.lblPopulation.TabIndex = 14
-        Me.lblPopulation.Text = "Population:"
+        Me.lblPopulation.Text = "Population: (Population)"
         '
         'lblGeneralInfo
         '
         Me.lblGeneralInfo.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblGeneralInfo.Location = New System.Drawing.Point(16, 140)
-        Me.lblGeneralInfo.MaximumSize = New System.Drawing.Size(1080, 720)
-        Me.lblGeneralInfo.MinimumSize = New System.Drawing.Size(1080, 720)
         Me.lblGeneralInfo.Name = "lblGeneralInfo"
-        Me.lblGeneralInfo.Size = New System.Drawing.Size(1080, 720)
+        Me.lblGeneralInfo.Size = New System.Drawing.Size(777, 177)
         Me.lblGeneralInfo.TabIndex = 13
         '
         'lblTitle
@@ -112,9 +110,9 @@ Partial Class Form3
         Me.lblTitle.Font = New System.Drawing.Font("Segoe UI", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.Location = New System.Drawing.Point(12, 90)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(162, 50)
+        Me.lblTitle.Size = New System.Drawing.Size(190, 50)
         Me.lblTitle.TabIndex = 11
-        Me.lblTitle.Text = "Country"
+        Me.lblTitle.Text = "(Country)"
         '
         'btnTranslator
         '
@@ -174,16 +172,6 @@ Partial Class Form3
         'ToolTip1
         '
         Me.ToolTip1.AutomaticDelay = 250
-        '
-        'lblFlag
-        '
-        Me.lblFlag.AutoSize = True
-        Me.lblFlag.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFlag.Location = New System.Drawing.Point(892, 106)
-        Me.lblFlag.Name = "lblFlag"
-        Me.lblFlag.Size = New System.Drawing.Size(54, 30)
-        Me.lblFlag.TabIndex = 26
-        Me.lblFlag.Text = "Flag"
         '
         'pbMap
         '
@@ -266,6 +254,16 @@ Partial Class Form3
         Me.btnReturn.TabIndex = 6
         Me.ToolTip1.SetToolTip(Me.btnReturn, "Return")
         Me.btnReturn.UseVisualStyleBackColor = False
+        '
+        'lblFlag
+        '
+        Me.lblFlag.AutoSize = True
+        Me.lblFlag.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFlag.Location = New System.Drawing.Point(892, 106)
+        Me.lblFlag.Name = "lblFlag"
+        Me.lblFlag.Size = New System.Drawing.Size(54, 30)
+        Me.lblFlag.TabIndex = 26
+        Me.lblFlag.Text = "Flag"
         '
         'pbBar
         '

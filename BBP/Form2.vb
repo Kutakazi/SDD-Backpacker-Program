@@ -16,8 +16,6 @@
                 Case5()
             Case 6
                 Case6()
-            Case 7
-                Case7()
         End Select
     End Sub
     Private Sub Button_Control(sender As Object, e As EventArgs) Handles btnExit.Click, btnMinimize.Click, btnReturn.Click
@@ -60,7 +58,7 @@
         lblInstructions5.Text = ""
     End Sub
     Sub Case4()
-        lblTitle.Text = ""
+        lblTitle.Text = "Translator"
         lblInstructions1.Text = ""
         lblInstructions2.Text = ""
         lblInstructions3.Text = ""
@@ -68,7 +66,7 @@
         lblInstructions5.Text = ""
     End Sub
     Sub Case5()
-        lblTitle.Text = ""
+        lblTitle.Text = "Landmarks"
         lblInstructions1.Text = ""
         lblInstructions2.Text = ""
         lblInstructions3.Text = ""
@@ -76,15 +74,7 @@
         lblInstructions5.Text = ""
     End Sub
     Sub Case6()
-        lblTitle.Text = ""
-        lblInstructions1.Text = ""
-        lblInstructions2.Text = ""
-        lblInstructions3.Text = ""
-        lblInstructions4.Text = ""
-        lblInstructions5.Text = ""
-    End Sub
-    Sub Case7()
-        lblTitle.Text = ""
+        lblTitle.Text = "Convertor"
         lblInstructions1.Text = ""
         lblInstructions2.Text = ""
         lblInstructions3.Text = ""

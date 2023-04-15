@@ -1,13 +1,16 @@
-﻿Imports System.IO
+﻿Imports System.Globalization
+Imports System.IO
 Imports System.Net
 Imports System.Net.Configuration
 Imports System.Web.Script.Serialization
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
 Imports Newtonsoft
 
 Public Class Form4
     Dim language As String
     Dim source_language As String = "en"
     Dim target_language As String
+    Dim source_text As String
     Public Property Country As String
     Private Sub Form4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Select Case Country
@@ -61,7 +64,20 @@ Public Class Form4
         End Select
     End Sub
     Sub China()
+        Dim arial As New Font("Arial", 14, FontStyle.Regular)
+        lblTitle.Text = "Chinese Translator"
         lblLanguage.Text = "Chinese"
+        rbtnHideTranslation.Text = "Hide Chinese"
+        lblT1.Font = arial
+        lblT2.Font = arial
+        lblT3.Font = arial
+        lblT4.Font = arial
+        lblT5.Font = arial
+        lblT6.Font = arial
+        lblT7.Font = arial
+        lblT8.Font = arial
+        lblT9.Font = arial
+        lblT10.Font = arial
         lblT1.Text = "你好吗？"
         lblT2.Text = "你能帮助我吗？"
         lblT3.Text = "可以问路吗？"
@@ -72,9 +88,12 @@ Public Class Form4
         lblT8.Text = "最近的酒店在哪里？"
         lblT9.Text = "机场在哪里？"
         lblT10.Text = "最近的警察局在哪里？"
+        tbTranslation.Font = arial
     End Sub
     Sub Russia()
+        lblTitle.Text = "Russian Translator"
         lblLanguage.Text = "Russian"
+        rbtnHideTranslation.Text = "Hide Russian"
         lblT1.Text = "Как дела?"
         lblT2.Text = "Вы можете помочь мне?"
         lblT3.Text = "Могу я спросить у вас дорогу?"
@@ -87,7 +106,9 @@ Public Class Form4
         lblT10.Text = "Где находится ближайший полицейский участок?"
     End Sub
     Sub Finland()
+        lblTitle.Text = "Finnish Translator"
         lblLanguage.Text = "Finnish"
+        rbtnHideTranslation.Text = "Hide Finnish"
         lblT1.Text = "Miten menee?"
         lblT2.Text = "Voitko auttaa minua?"
         lblT3.Text = "Voinko kysyä ohjeita?"
@@ -100,15 +121,33 @@ Public Class Form4
         lblT10.Text = "Missä on lähin poliisiasema?"
     End Sub
     Private Sub Flip_Translation(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.Checked Then
+            lblLeft.Text = "Translation"
+            lblRight.Text = "Enter Text"
+            source_language = language
+            target_language = "en"
+            tbTranslation.ReadOnly = False
+            tbEnglish.ReadOnly = True
+        Else
+            lblLeft.Text = "Enter Text"
+            lblRight.Text = "Translation"
+            source_language = "en"
+            target_language = language
+            tbEnglish.ReadOnly = False
+            tbTranslation.ReadOnly = True
+        End If
     End Sub
     Private Sub Translator(sender As Object, e As EventArgs) Handles btnTranslate.Click
-        Dim source_text As String = tbEnglish.Text
+        If CheckBox1.Checked Then
+            source_text = tbTranslation.Text
+        Else
+            source_text = tbEnglish.Text
+        End If
         Dim url As String = "https://api.mymemory.translated.net/get?q=" + source_text + "&langpair=" + source_language + "|" + target_language
 
         Try
             Dim request As HttpWebRequest = HttpWebRequest.Create(url)
             request.Proxy = Nothing
-            'request.UserAgent = "test"
 
             Dim response As HttpWebResponse = request.GetResponse
             Dim response_stream As System.IO.Stream = response.GetResponseStream
@@ -122,16 +161,111 @@ Public Class Form4
                 Dim trim_data As String = data.Substring(35, data_length)
                 Dim quote_index As Integer = InStr(1, trim_data, ",")
                 Dim subdata As String = trim_data.Substring(0, quote_index - 2)
-                tbTranslation.Text = System.Text.RegularExpressions.Regex.Unescape(subdata)
+                If CheckBox1.Checked Then
+                    tbEnglish.Text = System.Text.RegularExpressions.Regex.Unescape(subdata)
+                Else
+                    tbTranslation.Text = System.Text.RegularExpressions.Regex.Unescape(subdata)
+                End If
             Catch ex As Exception
-                tbTranslation.Text = "Error with code"
+                If CheckBox1.Checked Then
+                    tbEnglish.Text = "Error with code"
+                Else
+                    tbTranslation.Text = "Error with code"
+                End If
             End Try
         Catch ex As Exception
-            tbTranslation.Text = "Error with translation API"
+            If CheckBox1.Checked Then
+                tbEnglish.Text = "Error with translation API"
+            Else
+                tbTranslation.Text = "Error with translation API"
+            End If
         End Try
 
     End Sub
-    Private Sub rbtnHideEnglish_CheckedChanged(sender As Object, e As EventArgs) Handles rbtnHideEnglish.CheckedChanged, rbtnHideTranslation.CheckedChanged
-
+    Private Sub Hide_English(sender As Object, e As EventArgs) Handles rbtnHideEnglish.Click
+        If rbtnHideEnglish.Checked = True Then
+            rbtnHideEnglish.Checked = False
+            lblE1.Visible = True
+            lblE2.Visible = True
+            lblE3.Visible = True
+            lblE4.Visible = True
+            lblE5.Visible = True
+            lblE6.Visible = True
+            lblE7.Visible = True
+            lblE8.Visible = True
+            lblE9.Visible = True
+            lblE10.Visible = True
+            tbEnglish.Visible = True
+        Else
+            rbtnHideTranslation.Checked = False
+            rbtnHideEnglish.Checked = True
+            lblE1.Visible = False
+            lblE2.Visible = False
+            lblE3.Visible = False
+            lblE4.Visible = False
+            lblE5.Visible = False
+            lblE6.Visible = False
+            lblE7.Visible = False
+            lblE8.Visible = False
+            lblE9.Visible = False
+            lblE10.Visible = False
+            tbEnglish.Visible = False
+            If lblT1.Visible = False Then
+                lblT1.Visible = True
+                lblT2.Visible = True
+                lblT3.Visible = True
+                lblT4.Visible = True
+                lblT5.Visible = True
+                lblT6.Visible = True
+                lblT7.Visible = True
+                lblT8.Visible = True
+                lblT9.Visible = True
+                lblT10.Visible = True
+                tbTranslation.Visible = True
+            End If
+        End If
+    End Sub
+    Private Sub Hide_Translation(sender As Object, e As EventArgs) Handles rbtnHideTranslation.Click
+        If rbtnHideTranslation.Checked Then
+            rbtnHideTranslation.Checked = False
+            lblT1.Visible = True
+            lblT2.Visible = True
+            lblT3.Visible = True
+            lblT4.Visible = True
+            lblT5.Visible = True
+            lblT6.Visible = True
+            lblT7.Visible = True
+            lblT8.Visible = True
+            lblT9.Visible = True
+            lblT10.Visible = True
+            tbTranslation.Visible = True
+        Else
+            rbtnHideEnglish.Checked = False
+            rbtnHideTranslation.Checked = True
+            lblT1.Visible = False
+            lblT2.Visible = False
+            lblT3.Visible = False
+            lblT4.Visible = False
+            lblT5.Visible = False
+            lblT6.Visible = False
+            lblT7.Visible = False
+            lblT8.Visible = False
+            lblT9.Visible = False
+            lblT10.Visible = False
+            tbTranslation.Visible = False
+            If lblE1.Visible = False Then
+                lblE1.Visible = True
+                lblE2.Visible = True
+                lblE3.Visible = True
+                lblE4.Visible = True
+                lblE5.Visible = True
+                lblE6.Visible = True
+                lblE7.Visible = True
+                lblE8.Visible = True
+                lblE9.Visible = True
+                lblE10.Visible = True
+                tbEnglish.Visible = True
+            End If
+        End If
     End Sub
 End Class

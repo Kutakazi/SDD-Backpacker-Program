@@ -25,7 +25,7 @@ Partial Class Form4
         Me.components = New System.ComponentModel.Container()
         Me.lbl1 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblTitle = New System.Windows.Forms.Label()
         Me.lblLanguage = New System.Windows.Forms.Label()
         Me.lblE1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -60,6 +60,8 @@ Partial Class Form4
         Me.rbtnHideEnglish = New System.Windows.Forms.RadioButton()
         Me.rbtnHideTranslation = New System.Windows.Forms.RadioButton()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.lblLeft = New System.Windows.Forms.Label()
+        Me.lblRight = New System.Windows.Forms.Label()
         CType(Me.pbBar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -85,15 +87,15 @@ Partial Class Form4
         Me.Label1.TabIndex = 15
         Me.Label1.Text = "English"
         '
-        'Label3
+        'lblTitle
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(12, 93)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(171, 45)
-        Me.Label3.TabIndex = 17
-        Me.Label3.Text = "Translator"
+        Me.lblTitle.AutoSize = True
+        Me.lblTitle.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Location = New System.Drawing.Point(12, 93)
+        Me.lblTitle.Name = "lblTitle"
+        Me.lblTitle.Size = New System.Drawing.Size(349, 45)
+        Me.lblTitle.TabIndex = 17
+        Me.lblTitle.Text = "(Language) Translator"
         '
         'lblLanguage
         '
@@ -392,17 +394,17 @@ Partial Class Form4
         '
         'tbEnglish
         '
-        Me.tbEnglish.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbEnglish.Location = New System.Drawing.Point(12, 482)
+        Me.tbEnglish.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbEnglish.Location = New System.Drawing.Point(12, 523)
         Me.tbEnglish.Multiline = True
         Me.tbEnglish.Name = "tbEnglish"
-        Me.tbEnglish.Size = New System.Drawing.Size(420, 141)
+        Me.tbEnglish.Size = New System.Drawing.Size(420, 146)
         Me.tbEnglish.TabIndex = 40
         '
         'btnTranslate
         '
         Me.btnTranslate.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTranslate.Location = New System.Drawing.Point(456, 506)
+        Me.btnTranslate.Location = New System.Drawing.Point(456, 548)
         Me.btnTranslate.Name = "btnTranslate"
         Me.btnTranslate.Size = New System.Drawing.Size(152, 45)
         Me.btnTranslate.TabIndex = 41
@@ -411,16 +413,17 @@ Partial Class Form4
         '
         'tbTranslation
         '
-        Me.tbTranslation.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbTranslation.Location = New System.Drawing.Point(632, 482)
+        Me.tbTranslation.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbTranslation.Location = New System.Drawing.Point(632, 523)
         Me.tbTranslation.Multiline = True
         Me.tbTranslation.Name = "tbTranslation"
         Me.tbTranslation.ReadOnly = True
-        Me.tbTranslation.Size = New System.Drawing.Size(420, 141)
+        Me.tbTranslation.Size = New System.Drawing.Size(420, 146)
         Me.tbTranslation.TabIndex = 42
         '
         'rbtnHideEnglish
         '
+        Me.rbtnHideEnglish.AutoCheck = False
         Me.rbtnHideEnglish.AutoSize = True
         Me.rbtnHideEnglish.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbtnHideEnglish.Location = New System.Drawing.Point(232, 145)
@@ -433,6 +436,7 @@ Partial Class Form4
         '
         'rbtnHideTranslation
         '
+        Me.rbtnHideTranslation.AutoCheck = False
         Me.rbtnHideTranslation.AutoSize = True
         Me.rbtnHideTranslation.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbtnHideTranslation.Location = New System.Drawing.Point(764, 145)
@@ -447,12 +451,32 @@ Partial Class Form4
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(459, 574)
+        Me.CheckBox1.Location = New System.Drawing.Point(459, 617)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(153, 25)
         Me.CheckBox1.TabIndex = 45
         Me.CheckBox1.Text = "Flip Translations"
         Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'lblLeft
+        '
+        Me.lblLeft.AutoSize = True
+        Me.lblLeft.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLeft.Location = New System.Drawing.Point(14, 482)
+        Me.lblLeft.Name = "lblLeft"
+        Me.lblLeft.Size = New System.Drawing.Size(128, 32)
+        Me.lblLeft.TabIndex = 46
+        Me.lblLeft.Text = "Enter Text"
+        '
+        'lblRight
+        '
+        Me.lblRight.AutoSize = True
+        Me.lblRight.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRight.Location = New System.Drawing.Point(634, 482)
+        Me.lblRight.Name = "lblRight"
+        Me.lblRight.Size = New System.Drawing.Size(141, 32)
+        Me.lblRight.TabIndex = 47
+        Me.lblRight.Text = "Translation"
         '
         'Form4
         '
@@ -460,6 +484,8 @@ Partial Class Form4
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1064, 681)
         Me.ControlBox = False
+        Me.Controls.Add(Me.lblRight)
+        Me.Controls.Add(Me.lblLeft)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.rbtnHideTranslation)
         Me.Controls.Add(Me.rbtnHideEnglish)
@@ -488,7 +514,7 @@ Partial Class Form4
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.lblE1)
         Me.Controls.Add(Me.lblLanguage)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lbl1)
         Me.Controls.Add(Me.btnExit)
@@ -518,7 +544,7 @@ Partial Class Form4
     Friend WithEvents btnExit As Button
     Friend WithEvents lbl1 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lblTitle As Label
     Friend WithEvents lblLanguage As Label
     Friend WithEvents lblE1 As Label
     Friend WithEvents Label4 As Label
@@ -548,4 +574,6 @@ Partial Class Form4
     Friend WithEvents rbtnHideEnglish As RadioButton
     Friend WithEvents rbtnHideTranslation As RadioButton
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents lblLeft As Label
+    Friend WithEvents lblRight As Label
 End Class
