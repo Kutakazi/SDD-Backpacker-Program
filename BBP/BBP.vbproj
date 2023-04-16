@@ -48,9 +48,6 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -251,6 +248,129 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Right.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aus1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aus2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aus3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aus4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aus5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aus6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aus7.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aus8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aus9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aus10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\China1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\China2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\China3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\China4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\China5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\China6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\China7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\China8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\China9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\China10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Finland1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Finland2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Finland3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Finland4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Finland5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Finland6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Finland7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Finland8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Finland9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Finland10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Russia1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Russia2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Russia3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Russia4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Russia5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Russia6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Russia7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Russia8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Russia9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Russia10.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

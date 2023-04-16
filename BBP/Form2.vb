@@ -1,7 +1,7 @@
 ﻿Public Class Form2
     Public Property Current_Form As Integer
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        llblGithub.Links.Add(0, 11, "https://github.com/Kutakazi/BBP")
+        llblGithub.Links(0).LinkData = "https://github.com/Kutakazi/BBP"
         Update_Info()
     End Sub
     Public Sub Update_Info()
@@ -33,8 +33,6 @@
                         Return
                     End If
                 Next
-                Dim form1 As New Form1()
-                form1.Show()
                 Me.Close()
         End Select
     End Sub

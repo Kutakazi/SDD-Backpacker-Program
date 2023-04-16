@@ -2,9 +2,7 @@
 Imports System.IO
 Imports System.Net
 Imports System.Net.Configuration
-Imports System.Web.Script.Serialization
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
-Imports Newtonsoft
 
 Public Class Form4
     Dim language As String

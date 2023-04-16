@@ -25,19 +25,19 @@ Partial Class Form5
         Me.components = New System.ComponentModel.Container()
         Me.lbl1 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.lblTitle = New System.Windows.Forms.Label()
+        Me.lblCountry = New System.Windows.Forms.Label()
+        Me.llblGoogleMaps = New System.Windows.Forms.LinkLabel()
+        Me.tmr1 = New System.Windows.Forms.Timer(Me.components)
+        Me.btnPrev = New System.Windows.Forms.Button()
+        Me.btnNext = New System.Windows.Forms.Button()
         Me.btnControl = New System.Windows.Forms.Button()
+        Me.pbMain = New System.Windows.Forms.PictureBox()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnMinimize = New System.Windows.Forms.Button()
         Me.btnInfo = New System.Windows.Forms.Button()
         Me.btnReturn = New System.Windows.Forms.Button()
-        Me.btnNext = New System.Windows.Forms.Button()
-        Me.btnPrev = New System.Windows.Forms.Button()
-        Me.pbMain = New System.Windows.Forms.PictureBox()
         Me.pbBar = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblCountry = New System.Windows.Forms.Label()
-        Me.llblGoogleMaps = New System.Windows.Forms.LinkLabel()
-        Me.tmr1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.pbMain, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbBar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -58,20 +58,95 @@ Partial Class Form5
         '
         Me.ToolTip1.AutomaticDelay = 250
         '
+        'lblTitle
+        '
+        Me.lblTitle.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Location = New System.Drawing.Point(0, 96)
+        Me.lblTitle.Name = "lblTitle"
+        Me.lblTitle.Size = New System.Drawing.Size(1064, 45)
+        Me.lblTitle.TabIndex = 22
+        Me.lblTitle.Text = "(Landmark)"
+        Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblCountry
+        '
+        Me.lblCountry.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCountry.Location = New System.Drawing.Point(12, 614)
+        Me.lblCountry.Name = "lblCountry"
+        Me.lblCountry.Size = New System.Drawing.Size(399, 40)
+        Me.lblCountry.TabIndex = 26
+        Me.lblCountry.Text = "(Country) Landmarks"
+        Me.lblCountry.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'llblGoogleMaps
+        '
+        Me.llblGoogleMaps.AutoSize = True
+        Me.llblGoogleMaps.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.llblGoogleMaps.Location = New System.Drawing.Point(683, 618)
+        Me.llblGoogleMaps.Name = "llblGoogleMaps"
+        Me.llblGoogleMaps.Size = New System.Drawing.Size(359, 30)
+        Me.llblGoogleMaps.TabIndex = 27
+        Me.llblGoogleMaps.TabStop = True
+        Me.llblGoogleMaps.Text = "Link To Landmark On Google Maps"
+        '
+        'tmr1
+        '
+        Me.tmr1.Enabled = True
+        Me.tmr1.Interval = 7500
+        '
+        'btnPrev
+        '
+        Me.btnPrev.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnPrev.BackgroundImage = Global.BBP.My.Resources.Resources.Left
+        Me.btnPrev.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnPrev.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrev.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.btnPrev.Location = New System.Drawing.Point(417, 601)
+        Me.btnPrev.Name = "btnPrev"
+        Me.btnPrev.Size = New System.Drawing.Size(70, 70)
+        Me.btnPrev.TabIndex = 25
+        Me.ToolTip1.SetToolTip(Me.btnPrev, "Previous")
+        Me.btnPrev.UseVisualStyleBackColor = False
+        '
+        'btnNext
+        '
+        Me.btnNext.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnNext.BackgroundImage = Global.BBP.My.Resources.Resources.Right
+        Me.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnNext.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNext.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.btnNext.Location = New System.Drawing.Point(577, 601)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(70, 70)
+        Me.btnNext.TabIndex = 24
+        Me.ToolTip1.SetToolTip(Me.btnNext, "Next")
+        Me.btnNext.UseVisualStyleBackColor = False
+        '
         'btnControl
         '
         Me.btnControl.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.btnControl.BackgroundImage = Global.BBP.My.Resources.Resources.Play
+        Me.btnControl.BackgroundImage = Global.BBP.My.Resources.Resources.Pause
         Me.btnControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnControl.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.btnControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnControl.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.btnControl.Location = New System.Drawing.Point(497, 599)
+        Me.btnControl.Location = New System.Drawing.Point(497, 601)
         Me.btnControl.Name = "btnControl"
         Me.btnControl.Size = New System.Drawing.Size(70, 70)
         Me.btnControl.TabIndex = 23
-        Me.ToolTip1.SetToolTip(Me.btnControl, "Play")
+        Me.ToolTip1.SetToolTip(Me.btnControl, "Pause")
         Me.btnControl.UseVisualStyleBackColor = False
+        '
+        'pbMain
+        '
+        Me.pbMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbMain.Location = New System.Drawing.Point(0, 153)
+        Me.pbMain.Name = "pbMain"
+        Me.pbMain.Size = New System.Drawing.Size(1064, 438)
+        Me.pbMain.TabIndex = 21
+        Me.pbMain.TabStop = False
         '
         'btnExit
         '
@@ -134,44 +209,6 @@ Partial Class Form5
         Me.ToolTip1.SetToolTip(Me.btnReturn, "Return")
         Me.btnReturn.UseVisualStyleBackColor = False
         '
-        'btnNext
-        '
-        Me.btnNext.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.btnNext.BackgroundImage = Global.BBP.My.Resources.Resources.Right
-        Me.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnNext.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnNext.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.btnNext.Location = New System.Drawing.Point(577, 599)
-        Me.btnNext.Name = "btnNext"
-        Me.btnNext.Size = New System.Drawing.Size(70, 70)
-        Me.btnNext.TabIndex = 24
-        Me.ToolTip1.SetToolTip(Me.btnNext, "Next")
-        Me.btnNext.UseVisualStyleBackColor = False
-        '
-        'btnPrev
-        '
-        Me.btnPrev.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.btnPrev.BackgroundImage = Global.BBP.My.Resources.Resources.Left
-        Me.btnPrev.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnPrev.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPrev.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.btnPrev.Location = New System.Drawing.Point(417, 599)
-        Me.btnPrev.Name = "btnPrev"
-        Me.btnPrev.Size = New System.Drawing.Size(70, 70)
-        Me.btnPrev.TabIndex = 25
-        Me.ToolTip1.SetToolTip(Me.btnPrev, "Previous")
-        Me.btnPrev.UseVisualStyleBackColor = False
-        '
-        'pbMain
-        '
-        Me.pbMain.Location = New System.Drawing.Point(0, 154)
-        Me.pbMain.Name = "pbMain"
-        Me.pbMain.Size = New System.Drawing.Size(1064, 437)
-        Me.pbMain.TabIndex = 21
-        Me.pbMain.TabStop = False
-        '
         'pbBar
         '
         Me.pbBar.BackColor = System.Drawing.SystemColors.ActiveBorder
@@ -182,41 +219,6 @@ Partial Class Form5
         Me.pbBar.Size = New System.Drawing.Size(1064, 90)
         Me.pbBar.TabIndex = 15
         Me.pbBar.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(421, 98)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(193, 45)
-        Me.Label1.TabIndex = 22
-        Me.Label1.Text = "(Landmark)"
-        '
-        'lblCountry
-        '
-        Me.lblCountry.AutoSize = True
-        Me.lblCountry.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCountry.Location = New System.Drawing.Point(12, 616)
-        Me.lblCountry.Name = "lblCountry"
-        Me.lblCountry.Size = New System.Drawing.Size(316, 40)
-        Me.lblCountry.TabIndex = 26
-        Me.lblCountry.Text = "Australian Landmarks"
-        '
-        'llblGoogleMaps
-        '
-        Me.llblGoogleMaps.AutoSize = True
-        Me.llblGoogleMaps.Location = New System.Drawing.Point(778, 643)
-        Me.llblGoogleMaps.Name = "llblGoogleMaps"
-        Me.llblGoogleMaps.Size = New System.Drawing.Size(159, 13)
-        Me.llblGoogleMaps.TabIndex = 27
-        Me.llblGoogleMaps.TabStop = True
-        Me.llblGoogleMaps.Text = "Google Maps Link To Landmark"
-        '
-        'tmr1
-        '
-        Me.tmr1.Enabled = True
-        Me.tmr1.Interval = 10000
         '
         'Form5
         '
@@ -229,7 +231,7 @@ Partial Class Form5
         Me.Controls.Add(Me.btnPrev)
         Me.Controls.Add(Me.btnNext)
         Me.Controls.Add(Me.btnControl)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.pbMain)
         Me.Controls.Add(Me.lbl1)
         Me.Controls.Add(Me.btnExit)
@@ -264,7 +266,7 @@ Partial Class Form5
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents btnNext As Button
     Friend WithEvents btnPrev As Button
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblTitle As Label
     Friend WithEvents lblCountry As Label
     Friend WithEvents llblGoogleMaps As LinkLabel
     Friend WithEvents tmr1 As Timer

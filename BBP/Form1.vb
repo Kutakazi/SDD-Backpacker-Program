@@ -60,6 +60,5 @@
         Form3.StartPosition = FormStartPosition.Manual
         Form3.Location = Me.Location
         Form3.Show()
-        Form3.Show()
     End Sub
 End Class
