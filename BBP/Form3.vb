@@ -1,6 +1,7 @@
 ﻿Public Class Form3
     Public Property Country As String
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblTitle.Text = Country
         Me.Text = Country
         Select Case Country
             Case "Australia"
