@@ -155,7 +155,7 @@ Partial Class Form3
         Me.btnConverter.Name = "btnConverter"
         Me.btnConverter.Size = New System.Drawing.Size(221, 46)
         Me.btnConverter.TabIndex = 23
-        Me.btnConverter.Text = "Currency Convertor"
+        Me.btnConverter.Text = "Currency Converter"
         Me.ToolTip1.SetToolTip(Me.btnConverter, "Converters")
         Me.btnConverter.UseVisualStyleBackColor = False
         '

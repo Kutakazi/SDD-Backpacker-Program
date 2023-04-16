@@ -2,7 +2,6 @@
     Public Property Country As String
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Text = Country
-        lblTitle.Text = Country
         Select Case Country
             Case "Australia"
                 Australia()
@@ -23,7 +22,7 @@
             End If
         End If
     End Sub
-    Private Sub Button_Control(sender As Object, e As EventArgs) Handles btnExit.Click, btnInfo.Click, btnMinimize.Click, btnReturn.Click, btnTranslator.Click, btnConverter.Click, btnLandmarks.Click, pbFlag.Click
+    Private Sub Button_Control(sender As Object, e As EventArgs) Handles btnExit.Click, btnInfo.Click, btnMinimize.Click, btnReturn.Click, btnTranslator.Click, btnConverter.Click, btnLandmarks.Click, pbMap.Click
         Select Case sender.name
             Case "btnExit"
                 If MsgBox("Are you sure you want to exit?", vbOKCancel + vbDefaultButton2, "Confirm Exit") = vbOK Then
@@ -67,7 +66,7 @@
                 form6.StartPosition = FormStartPosition.Manual
                 form6.Location = Me.Location
                 form6.Show()
-            Case "pbFlag"
+            Case "pbMap"
                 Dim form7 As New Form7
                 form7.Country = Country
                 form7.StartPosition = FormStartPosition.Manual

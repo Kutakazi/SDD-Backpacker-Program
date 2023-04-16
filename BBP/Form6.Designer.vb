@@ -340,7 +340,7 @@ Partial Class Form6
         Me.Name = "Form6"
         Me.ShowIcon = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.Text = "Form6"
+        Me.Text = "Currency Converter"
         CType(Me.pbBar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -72,7 +72,7 @@
         lblInstructions5.Text = ""
     End Sub
     Sub Case6()
-        lblTitle.Text = "Convertor"
+        lblTitle.Text = "Converter"
         lblInstructions1.Text = ""
         lblInstructions2.Text = ""
         lblInstructions3.Text = ""
