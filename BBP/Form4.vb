@@ -139,7 +139,7 @@ Public Class Form4
         If CheckBox1.Checked And tbTranslation.Text <> "" Then
             source_text = tbTranslation.Text
             Translator()
-        ElseIf tbEnglish.Text <> "" Then
+        ElseIf CheckBox1.Checked = False And tbEnglish.Text <> "" Then
             source_text = tbEnglish.Text
             Translator()
         Else
