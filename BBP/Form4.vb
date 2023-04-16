@@ -155,7 +155,7 @@ Public Class Form4
             stream_reader.Close()
 
             Try
-                Dim data_length As Integer = Len(data) - 100
+                Dim data_length As Integer = Len(data) - 36
                 Dim trim_data As String = data.Substring(35, data_length)
                 Dim quote_index As Integer = InStr(1, trim_data, ",")
                 Dim subdata As String = trim_data.Substring(0, quote_index - 2)

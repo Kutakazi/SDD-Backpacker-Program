@@ -121,9 +121,9 @@ Partial Class Form3
         Me.btnTranslator.FlatAppearance.BorderSize = 3
         Me.btnTranslator.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnTranslator.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTranslator.Location = New System.Drawing.Point(150, 475)
+        Me.btnTranslator.Location = New System.Drawing.Point(129, 475)
         Me.btnTranslator.Name = "btnTranslator"
-        Me.btnTranslator.Size = New System.Drawing.Size(178, 46)
+        Me.btnTranslator.Size = New System.Drawing.Size(221, 46)
         Me.btnTranslator.TabIndex = 20
         Me.btnTranslator.Text = "Translator"
         Me.ToolTip1.SetToolTip(Me.btnTranslator, "Translator")
@@ -136,9 +136,9 @@ Partial Class Form3
         Me.btnLandmarks.FlatAppearance.BorderSize = 3
         Me.btnLandmarks.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLandmarks.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLandmarks.Location = New System.Drawing.Point(150, 541)
+        Me.btnLandmarks.Location = New System.Drawing.Point(129, 541)
         Me.btnLandmarks.Name = "btnLandmarks"
-        Me.btnLandmarks.Size = New System.Drawing.Size(178, 46)
+        Me.btnLandmarks.Size = New System.Drawing.Size(221, 46)
         Me.btnLandmarks.TabIndex = 22
         Me.btnLandmarks.Text = "Landmarks"
         Me.ToolTip1.SetToolTip(Me.btnLandmarks, "Landmarks")
@@ -151,11 +151,11 @@ Partial Class Form3
         Me.btnConverter.FlatAppearance.BorderSize = 3
         Me.btnConverter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnConverter.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnConverter.Location = New System.Drawing.Point(150, 608)
+        Me.btnConverter.Location = New System.Drawing.Point(129, 608)
         Me.btnConverter.Name = "btnConverter"
-        Me.btnConverter.Size = New System.Drawing.Size(178, 46)
+        Me.btnConverter.Size = New System.Drawing.Size(221, 46)
         Me.btnConverter.TabIndex = 23
-        Me.btnConverter.Text = "Converters"
+        Me.btnConverter.Text = "Currency Convertor"
         Me.ToolTip1.SetToolTip(Me.btnConverter, "Converters")
         Me.btnConverter.UseVisualStyleBackColor = False
         '

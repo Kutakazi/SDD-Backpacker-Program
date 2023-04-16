@@ -136,7 +136,7 @@ Partial Class Form5
         Me.btnControl.Name = "btnControl"
         Me.btnControl.Size = New System.Drawing.Size(70, 70)
         Me.btnControl.TabIndex = 23
-        Me.ToolTip1.SetToolTip(Me.btnControl, "Pause")
+        Me.ToolTip1.SetToolTip(Me.btnControl, "Control")
         Me.btnControl.UseVisualStyleBackColor = False
         '
         'pbMain
