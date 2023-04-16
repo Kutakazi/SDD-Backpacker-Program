@@ -1,7 +1,7 @@
 ﻿Public Class Form7
     Public Property Country As String
     Private Sub Form7_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Text = "Map Of" & Country
+        Me.Text = "Map Of " & Country
         Select Case Country
             Case "Australia"
                 pbMain.BackgroundImage = My.Resources.MapAus

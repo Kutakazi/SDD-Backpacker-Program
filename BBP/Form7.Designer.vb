@@ -67,7 +67,7 @@ Partial Class Form7
         Me.btnExit.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.btnExit.Location = New System.Drawing.Point(982, 10)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(70, 47)
+        Me.btnExit.Size = New System.Drawing.Size(70, 70)
         Me.btnExit.TabIndex = 13
         Me.ToolTip1.SetToolTip(Me.btnExit, "Exit")
         Me.btnExit.UseVisualStyleBackColor = False
