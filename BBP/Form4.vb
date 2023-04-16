@@ -135,12 +135,18 @@ Public Class Form4
             tbTranslation.ReadOnly = True
         End If
     End Sub
-    Private Sub Translator(sender As Object, e As EventArgs) Handles btnTranslate.Click
-        If CheckBox1.Checked Then
+    Sub Check_Input(sender As Object, e As EventArgs) Handles btnTranslate.Click
+        If CheckBox1.Checked And tbTranslation.Text <> "" Then
             source_text = tbTranslation.Text
-        Else
+            Translator()
+        ElseIf tbEnglish.Text <> "" Then
             source_text = tbEnglish.Text
+            Translator()
+        Else
+            MessageBox.Show("Please enter a message to translate.")
         End If
+    End Sub
+    Private Sub Translator()
         Dim url As String = "https://api.mymemory.translated.net/get?q=" + source_text + "&langpair=" + source_language + "|" + target_language
 
         Try

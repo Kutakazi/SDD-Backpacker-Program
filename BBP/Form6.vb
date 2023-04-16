@@ -122,14 +122,16 @@ Public Class Form6
         Dim num_right As Single
         Dim num_left As Single
         Update()
-        If flip = False Then
+        If flip = False And tbLeft.Text <> "" Then
             Single.TryParse(sub_data, num_right)
             Single.TryParse(tbLeft.Text, num_left)
             tbRight.Text = num_right * num_left
-        Else
+        ElseIf flip = True And tbRight.Text <> "" Then
             Single.TryParse(tbRight.Text, num_right)
             Single.TryParse(sub_data, num_left)
             tbLeft.Text = num_right / num_left
+        Else
+            MessageBox.Show("Please enter an amount to convert.")
         End If
     End Sub
     Private Sub tb_Change(sender As Object, e As EventArgs) Handles tbLeft.TextChanged, tbRight.TextChanged

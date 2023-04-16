@@ -67,51 +67,46 @@ Partial Class Form2
         '
         'lblInstructions1
         '
-        Me.lblInstructions1.AutoSize = True
         Me.lblInstructions1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblInstructions1.Location = New System.Drawing.Point(15, 148)
         Me.lblInstructions1.Name = "lblInstructions1"
-        Me.lblInstructions1.Size = New System.Drawing.Size(148, 25)
+        Me.lblInstructions1.Size = New System.Drawing.Size(677, 95)
         Me.lblInstructions1.TabIndex = 13
         Me.lblInstructions1.Text = "(Instructions 1)"
         '
         'lblInstructions2
         '
-        Me.lblInstructions2.AutoSize = True
         Me.lblInstructions2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblInstructions2.Location = New System.Drawing.Point(15, 189)
         Me.lblInstructions2.Name = "lblInstructions2"
-        Me.lblInstructions2.Size = New System.Drawing.Size(148, 25)
+        Me.lblInstructions2.Size = New System.Drawing.Size(677, 82)
         Me.lblInstructions2.TabIndex = 14
         Me.lblInstructions2.Text = "(Instructions 2)"
         '
         'lblInstructions3
         '
-        Me.lblInstructions3.AutoSize = True
         Me.lblInstructions3.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblInstructions3.Location = New System.Drawing.Point(15, 230)
         Me.lblInstructions3.Name = "lblInstructions3"
-        Me.lblInstructions3.Size = New System.Drawing.Size(148, 25)
+        Me.lblInstructions3.Size = New System.Drawing.Size(677, 73)
         Me.lblInstructions3.TabIndex = 15
         Me.lblInstructions3.Text = "(Instructions 3)"
         '
         'lblInstructions4
         '
-        Me.lblInstructions4.AutoSize = True
         Me.lblInstructions4.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblInstructions4.Location = New System.Drawing.Point(15, 271)
         Me.lblInstructions4.Name = "lblInstructions4"
-        Me.lblInstructions4.Size = New System.Drawing.Size(148, 25)
+        Me.lblInstructions4.Size = New System.Drawing.Size(677, 78)
         Me.lblInstructions4.TabIndex = 16
         Me.lblInstructions4.Text = "(Instructions 4)"
         '
         'lblInstructions5
         '
-        Me.lblInstructions5.AutoSize = True
         Me.lblInstructions5.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblInstructions5.Location = New System.Drawing.Point(15, 312)
         Me.lblInstructions5.Name = "lblInstructions5"
-        Me.lblInstructions5.Size = New System.Drawing.Size(148, 25)
+        Me.lblInstructions5.Size = New System.Drawing.Size(677, 67)
         Me.lblInstructions5.TabIndex = 17
         Me.lblInstructions5.Text = "(Instructions 5)"
         '
@@ -119,7 +114,7 @@ Partial Class Form2
         '
         Me.lblNotice.AutoSize = True
         Me.lblNotice.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNotice.Location = New System.Drawing.Point(46, 395)
+        Me.lblNotice.Location = New System.Drawing.Point(46, 407)
         Me.lblNotice.Name = "lblNotice"
         Me.lblNotice.Size = New System.Drawing.Size(619, 21)
         Me.lblNotice.TabIndex = 18
@@ -127,7 +122,7 @@ Partial Class Form2
         '
         'COPY
         '
-        Me.COPY.Location = New System.Drawing.Point(11, 431)
+        Me.COPY.Location = New System.Drawing.Point(11, 438)
         Me.COPY.Name = "COPY"
         Me.COPY.Size = New System.Drawing.Size(683, 241)
         Me.COPY.TabIndex = 20
@@ -137,7 +132,7 @@ Partial Class Form2
         '
         Me.llblGithub.AutoSize = True
         Me.llblGithub.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llblGithub.Location = New System.Drawing.Point(300, 358)
+        Me.llblGithub.Location = New System.Drawing.Point(300, 376)
         Me.llblGithub.Name = "llblGithub"
         Me.llblGithub.Size = New System.Drawing.Size(105, 21)
         Me.llblGithub.TabIndex = 19
@@ -227,11 +222,11 @@ Partial Class Form2
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(704, 681)
         Me.ControlBox = False
+        Me.Controls.Add(Me.lblInstructions5)
+        Me.Controls.Add(Me.lblInstructions4)
         Me.Controls.Add(Me.COPY)
         Me.Controls.Add(Me.llblGithub)
         Me.Controls.Add(Me.lblNotice)
-        Me.Controls.Add(Me.lblInstructions5)
-        Me.Controls.Add(Me.lblInstructions4)
         Me.Controls.Add(Me.lblInstructions3)
         Me.Controls.Add(Me.lblInstructions2)
         Me.Controls.Add(Me.lblInstructions1)

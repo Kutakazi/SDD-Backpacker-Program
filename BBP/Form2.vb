@@ -44,7 +44,9 @@
         lblInstructions1.Text = "Click On A Flag To Choose Country"
         lblInstructions2.Text = "Click On Return Button To Go To Previous Form"
         lblInstructions3.Text = "Click On Information Button To Open Information"
+        lblInstructions4.Visible = True
         lblInstructions4.Text = "Click On Minimize Button To Minimize Form"
+        lblInstructions5.Visible = True
         lblInstructions5.Text = "Click On Exit Button To Exit Program"
     End Sub
     Sub Case3()
@@ -52,7 +54,9 @@
         lblInstructions1.Text = "Click On Translator Button To Open Translator"
         lblInstructions2.Text = "Click On Landmarks Button To Open Landmarks"
         lblInstructions3.Text = "Click On Currency Converter Button To Open Currency Converter"
+        lblInstructions4.Visible = True
         lblInstructions4.Text = "Click On Map To Enlarge Map"
+        lblInstructions5.Visible = False
         lblInstructions5.Text = ""
     End Sub
     Sub Case4()
@@ -60,23 +64,29 @@
         lblInstructions1.Text = "Click On Hide English Radio Button To Hide English"
         lblInstructions2.Text = "Click On Hide Translation Radio Button To Hide Translation"
         lblInstructions3.Text = "Click On A Selected Radio Button To Deselect Radio Button"
-        lblInstructions4.Text = "Enter Text In The Text Box And Click The Translate Button To Translate Custom Phrases"
-        lblInstructions5.Text = "Check Flip Translations To Reverse Language Translation"
+        lblInstructions4.Visible = True
+        lblInstructions4.Text = "Check Flip Translations To Reverse Language Translation"
+        lblInstructions5.Visible = True
+        lblInstructions5.Text = "Enter Text In The Text Box And Click The Translate Button To Translate Custom Phrases"
     End Sub
     Sub Case5()
         lblTitle.Text = "Landmarks"
         lblInstructions1.Text = "Click On Control Button To Play And Pause The Slideshow"
         lblInstructions2.Text = "Click Previous To Go Back A Slide"
         lblInstructions3.Text = "Click Next To Go Forward A Slide"
+        lblInstructions4.Visible = True
         lblInstructions4.Text = "Click On The Link Lable To Be Brought To The Google Maps Page Of The Landmark"
+        lblInstructions5.Visible = False
         lblInstructions5.Text = ""
     End Sub
     Sub Case6()
         lblTitle.Text = "Converter"
         lblInstructions1.Text = "Use Drop Down Menus To Choose Languages"
-        lblInstructions2.Text = "Enter A Float Into The Text Box And Click The Convert Button To Convert Amount"
-        lblInstructions3.Text = "Check Flip Conversion To Reverse Currency Conversion"
+        lblInstructions2.Text = "Check Flip Conversion To Reverse Currency Conversion"
+        lblInstructions3.Text = "Enter A Float Into The Text Box And Click The Convert Button To Convert Amount"
+        lblInstructions4.Visible = False
         lblInstructions4.Text = ""
+        lblInstructions5.Visible = False
         lblInstructions5.Text = ""
     End Sub
 End Class
